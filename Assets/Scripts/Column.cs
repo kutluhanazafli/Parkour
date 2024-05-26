@@ -10,7 +10,7 @@ public class Column : MonoBehaviour
     private Vector3 velocity;
     private bool broke = false;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(Physics.CheckBox(checker.position, new Vector3(radius, 2f, radius), Quaternion.identity, player_layer))
         {
@@ -18,7 +18,7 @@ public class Column : MonoBehaviour
         }
         if(broke)
         {
-            velocity.y -= Time.deltaTime / 200;
+            velocity.y -= Time.deltaTime / 25;
             transform.Translate(velocity);
         }
     }

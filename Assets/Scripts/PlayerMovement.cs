@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckerRadius;
     public LayerMask obstacleLayer;
 
-    public float jumpHeight = 0.2f;
+    public float jumpHeight = 20f;
     public float gravityDivide = 30f;
     public float jumpSpeed = 20f;
     private float aTimer;
