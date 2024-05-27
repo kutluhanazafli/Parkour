@@ -40,6 +40,11 @@ public class SettingsMenu : MonoBehaviour
     public void SetMouseSensitivity(float value)
     {
         PlayerPrefs.SetFloat("MouseSensitivity", value);
+
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().mouseSensitivity = value;
+        }
     }
 
     public void SetMasterVolume(float value)

@@ -39,7 +39,10 @@ public class LaserEnemy : MonoBehaviour
         {
             if (laser_hit)
             {
-                hit.transform.gameObject.GetComponent<PlayerManager>().Death();
+                if (hit.transform.CompareTag("Player"))
+                {
+                    hit.transform.gameObject.GetComponent<PlayerManager>().Death();
+                }
             }
         }
     }
